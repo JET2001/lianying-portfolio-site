@@ -1,0 +1,21 @@
+{
+  "name": "lianying-portfolio-site",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "test": "vitest",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "eslint": "^10.9.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.2",
+    "vitest": "^4.1.11",
+    "wrangler": "^4.127.1"
+  }
+}

@@ -6,5 +6,8 @@
   "forwardPorts": [5173],
   "postCreateCommand": "npm ci",
   "remoteUser": "node",
-  "updateRemoteUserUID": true
+  "updateRemoteUserUID": true,
+  "remoteEnv": {
+    "GIT_ASKPASS": "/usr/local/share/docker-init.sh"
+  }
 }
