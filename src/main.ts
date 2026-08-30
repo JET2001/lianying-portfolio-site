@@ -5,6 +5,7 @@ import { Education } from './components/education'
 import { ui } from './i18n'
 import type { Locale, UiStrings } from './i18n/types'
 import type { Bio } from './components/header/types'
+import type { EducationItem } from './components/education/types'
 
 let locale = getInitialLocale()
 

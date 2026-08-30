@@ -1,7 +1,7 @@
 import '../../style.css'
 import './education.css'
 
-import type { EducationItem } from '../../types'
+import type { EducationItem } from './types'
 import type { UiStrings } from '../../i18n/types'
 
 export function Education(

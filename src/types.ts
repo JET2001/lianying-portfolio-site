@@ -17,11 +17,3 @@ export interface WorkItem {
     links: Link[]
     evidence: EvidenceEntry[]
 }
-
-export interface EducationItem {
-    id: string
-    institution: string
-    degree: string
-    date: string
-    details: Link[]
-}
