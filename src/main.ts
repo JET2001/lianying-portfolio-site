@@ -1,60 +1,105 @@
 import './style.css'
-import heroImg from './assets/hero.png'
-import typescriptLogo from './assets/typescript.svg'
-import viteLogo from './assets/vite.svg'
-import { setupCounter } from './counter.ts'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-<section id="center">
-  <div class="hero">
-    <img src="${heroImg}" class="base" width="170" height="179">
-    <img src="${typescriptLogo}" class="framework" alt="TypeScript logo"/>
-    <img src="${viteLogo}" class="vite" alt="Vite logo" />
-  </div>
-  <div>
-    <h1>Get started</h1>
-    <p>Edit <code>src/main.ts</code> and save to test <code>HMR</code></p>
-  </div>
-  <button id="counter" type="button" class="counter"></button>
-</section>
+import { Header } from './components/header'
+import { ui } from './i18n'
+import type { Locale, UiStrings } from './i18n/types'
+import type { Bio } from './components/header/types'
+import type { EducationItem } from './types'
 
-<div class="ticks"></div>
+let locale = getInitialLocale()
 
-<section id="next-steps">
-  <div id="docs">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#documentation-icon"></use></svg>
-    <h2>Documentation</h2>
-    <p>Your questions, answered</p>
-    <ul>
-      <li>
-        <a href="https://vite.dev/" target="_blank">
-          <img class="logo" src="${viteLogo}" alt="" />
-          Explore Vite
-        </a>
-      </li>
-      <li>
-        <a href="https://www.typescriptlang.org" target="_blank">
-          <img class="button-icon" src="${typescriptLogo}" alt="">
-          Learn more
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div id="social">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#social-icon"></use></svg>
-    <h2>Connect with us</h2>
-    <p>Join the Vite community</p>
-    <ul>
-      <li><a href="https://github.com/vitejs/vite" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
-      <li><a href="https://chat.vite.dev/" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Discord</a></li>
-      <li><a href="https://x.com/vite_js" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#x-icon"></use></svg>X.com</a></li>
-      <li><a href="https://bsky.app/profile/vite.dev" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
-    </ul>
-  </div>
-</section>
+async function render(): Promise<void> {
+  const app = document.querySelector<HTMLDivElement>('#app')
 
-<div class="ticks"></div>
-<section id="spacer"></section>
-`
+  if (!app) {
+    throw new Error('#app element not found')
+  }
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+  try {
+    const data = await loadPageData(locale)
+    const ui_language : UiStrings = ui[locale]
+
+    setDocumentLanguage(locale)
+
+    app.innerHTML = `
+      <div class="wrap">
+        ${Header(data.bio, ui_language)}
+      </div>
+    `
+
+    document
+      .querySelector<HTMLButtonElement>('[data-language-toggle]')
+      ?.addEventListener('click', () => {
+        locale = locale === 'en' ? 'zh' : 'en'
+        saveLocale(locale)
+        void render()
+      })
+  } catch (error) {
+    console.error(error)
+
+    app.innerHTML = `
+      <div class="load-error">
+        Unable to load portfolio data.
+      </div>
+    `
+  }
+}
+
+void render()
+
+// =========================================================================
+
+function getInitialLocale(): Locale {
+  const params = new URLSearchParams(window.location.search)
+  const urlLocale = params.get('lang')
+
+  if (urlLocale === 'en' || urlLocale === 'zh') {
+    return urlLocale
+  }
+
+  const savedLocale = localStorage.getItem('locale')
+
+  if (savedLocale === 'en' || savedLocale === 'zh') {
+    return savedLocale
+  }
+
+  return navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en'
+}
+
+async function loadJson<T>(
+  locale: Locale,
+  file: string,
+): Promise<T> {
+  const response = await fetch(`/data/${locale}/${file}.json`)
+
+  if (!response.ok) {
+    throw new Error(`Failed to load /data/${locale}/${file}.json`)
+  }
+
+  return response.json() as Promise<T>
+}
+
+async function loadPageData(locale: Locale) {
+  const [bio, education] = await Promise.all([
+    loadJson<Bio>(locale, 'bio'),
+    loadJson<EducationItem[]>(locale, 'education'),
+  ])
+
+  return {
+    bio,
+    education,
+  }
+}
+
+function saveLocale(locale: Locale): void {
+  localStorage.setItem('locale', locale)
+
+  const url = new URL(window.location.href)
+  url.searchParams.set('lang', locale)
+
+  window.history.replaceState({}, '', url)
+}
+
+function setDocumentLanguage(locale: Locale): void {
+  document.documentElement.lang = locale === 'zh' ? 'zh-CN' : 'en'
+}
