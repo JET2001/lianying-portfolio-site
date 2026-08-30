@@ -1,10 +1,10 @@
 import './style.css'
 
 import { Header } from './components/header'
+import { Education } from './components/education'
 import { ui } from './i18n'
 import type { Locale, UiStrings } from './i18n/types'
 import type { Bio } from './components/header/types'
-import type { EducationItem } from './types'
 
 let locale = getInitialLocale()
 
@@ -24,7 +24,11 @@ async function render(): Promise<void> {
     app.innerHTML = `
       <div class="wrap">
         ${Header(data.bio, ui_language)}
+        <main>
+        ${Education(data.education, ui_language)}
+        </main>      
       </div>
+      
     `
 
     document

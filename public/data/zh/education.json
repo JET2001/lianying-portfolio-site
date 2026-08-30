@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sichuan-academy-social-sciences",
+    "institution": "四川省社会科学院",
+    "degree": "经济学硕士",
+    "date": "2024.09 - 2027.06",
+    "details": [
+        {
+            "label": "成绩单",
+            "href": "/SASS/transcript.pdf",
+            "external": true
+        },
+        {
+            "label": "学籍验证",
+            "href": "/SASS/enrolment.pdf",
+            "external": true
+        }
+    ]
+  },
+  {
+    "id": "swufe",
+    "institution": "西南财经大学",
+    "degree": "经济学学士",
+    "date": "2020.09 - 2024.07",
+    "details": [
+        {
+            "label": "成绩单",
+            "href": "/SWUFE/transcript.pdf",
+            "external": true
+        },
+        {
+            "label": "学籍验证",
+            "href": "/SWUFE/enrolment.pdf",
+            "external": true
+        }
+    ]
+  }
+]

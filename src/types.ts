@@ -23,5 +23,5 @@ export interface EducationItem {
     institution: string
     degree: string
     date: string
-    details: string[]
+    details: Link[]
 }

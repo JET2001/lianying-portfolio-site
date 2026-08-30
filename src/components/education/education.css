@@ -1,0 +1,54 @@
+.education-details {
+  display: flex;
+  gap: 20px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.education-details li {
+  margin: 0;
+}
+
+.education-details a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  color: #2f9fb8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration-color: #7fc6d5;
+  text-underline-offset: 3px;
+}
+
+.education-details a::after {
+  content: "↗";
+  color: #42a9bf;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.education-details a:hover {
+  color: #1f8298;
+}
+
+html:lang(zh-CN) .education-details {
+  font-family:
+    "Noto Sans SC",
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+}
+.education-date {
+  color: #666;
+  font-size: 13px;
+}
+@media (max-width: 650px) {
+  .education-details {
+    margin-top: 10px;
+  }
+}
