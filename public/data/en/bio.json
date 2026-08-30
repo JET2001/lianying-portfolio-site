@@ -5,8 +5,9 @@
   "intro": "I am an applied economics graduate student. This page is an index of selected work and supporting material.",
   "links": [
     {
-      "label": "resume.pdf",
-      "href": "/resume.pdf"
+      "label": "Resume",
+      "href": "/resume-en.pdf",
+      "external": true
     },
     {
       "label": "email",
@@ -14,7 +15,8 @@
     },
     {
       "label": "linkedin",
-      "href": "https://www.linkedin.com/in/lianying-wei-954376326/"
+      "href": "https://www.linkedin.com/in/lianying-wei-954376326/",
+      "external": true
     }
   ]
 }

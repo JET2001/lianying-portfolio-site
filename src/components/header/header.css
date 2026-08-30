@@ -180,7 +180,11 @@ html:lang(zh-CN) .bio-hero .links {
 @media (min-width: 1000px) {
   .bio-hero {
     min-height: 360px;
+    margin-bottom: 68px;
     background: #040506;
+  }
+  section {
+    margin-top: 64px;
   }
 
   .bio-photo {
@@ -212,14 +216,14 @@ html:lang(zh-CN) .bio-hero .links {
 
   .bio-overlay {
     background: linear-gradient(
-      90deg,
-      #040506 0%,
-      #040506 30%,
-      rgba(4, 5, 6, 0.98) 36%,
-      rgba(4, 5, 6, 0.82) 43%,
-      rgba(4, 5, 6, 0.42) 52%,
-      rgba(4, 5, 6, 0.12) 60%,
-      transparent 68%
+        90deg,
+        #040506 0%,
+        #040506 31%,
+        rgba(4, 5, 6, 0.97) 37%,
+        rgba(4, 5, 6, 0.82) 44%,
+        rgba(4, 5, 6, 0.52) 50%,
+        rgba(4, 5, 6, 0.2) 57%,
+        transparent 64%
     );
   }
 

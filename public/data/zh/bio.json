@@ -5,8 +5,9 @@
   "intro": "经济学硕士研究生。本页面收录部分研究经历及相关证明材料。",
   "links": [
     {
-      "label": "简历.pdf",
-      "href": "/resume-cn.pdf"
+      "label": "简历",
+      "href": "/resume-zh.pdf",
+      "external": true
     },
     {
       "label": "邮箱",
@@ -14,7 +15,8 @@
     },
     {
       "label": "LinkedIn",
-      "href": "https://www.linkedin.com/in/lianying-wei-954376326/"
+      "href": "https://www.linkedin.com/in/lianying-wei-954376326/",
+      "external": true
     }
   ]
 }
