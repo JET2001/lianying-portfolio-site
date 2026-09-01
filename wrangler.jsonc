@@ -3,6 +3,16 @@
   "name": "lianying-portfolio-site",
   "compatibility_date": "2026-08-28",
 
+  "workers_dev": false,
+  "preview_urls": false,
+
+  "routes": [
+    {
+      "pattern": "lianyingwei.com",
+      "custom_domain": true
+    }
+  ],
+
   "assets": {
     "directory": "./dist"
   }
