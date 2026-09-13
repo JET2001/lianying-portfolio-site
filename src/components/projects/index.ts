@@ -6,13 +6,13 @@ import type { UiStrings } from '../../i18n/types'
 export function Projects(items: ProjectItem[], t: UiStrings): string {
   const content = items
     .map(({ id, title, context, date, links }) => `
-      <li class="project-item" id="project-${id}">
-        <div class="project-date">${date}</div>
-        <div class="project-content">
-          <h3 class="project-title">${title}</h3>
-          <div class="project-context">${context}</div>
+      <li class="project-item entry-item" id="project-${id}">
+        <div class="project-date entry-date">${date}</div>
+        <div class="project-content entry-content">
+          <h3 class="project-title entry-title">${title}</h3>
+          <div class="project-context entry-subtitle">${context}</div>
           ${links.length > 0 ? `
-            <ul class="project-links">
+            <ul class="project-links document-links entry-links">
               ${links.map(({ label, href, external }) => `
                 <li>
                   <a href="${href}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${label}</a>
@@ -26,9 +26,9 @@ export function Projects(items: ProjectItem[], t: UiStrings): string {
     .join('')
 
   return `
-    <section class="project" aria-labelledby="project-heading">
+    <section class="project entry-section" aria-labelledby="project-heading">
       <h2 class="section-title" id="project-heading">${t.sections.selectedWork}</h2>
-      <ol class="project-list">${content}</ol>
+      <ol class="project-list entry-list">${content}</ol>
     </section>
   `
 }

@@ -1,0 +1,126 @@
+/* Shared layout for Experience, Projects, and Publications.
+ * Component styles map their own variables to this layout's --entry-* API.
+ */
+.entry-section {
+  --entry-default-item-padding: 24px;
+  --entry-default-column-gap: 18px;
+  --entry-default-link-gap: 20px;
+
+  margin-top: var(--entry-section-gap);
+  font-family: Arial, Helvetica, "Noto Sans SC", sans-serif;
+}
+
+.entry-section > .section-title {
+  margin-top: 0;
+}
+
+.entry-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.entry-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--entry-date-width);
+  grid-template-areas: "content date";
+  gap: var(--entry-column-gap);
+  align-items: start;
+  border-top: 1px solid #e3e3e3;
+  padding: var(--entry-item-padding) 0;
+}
+
+.entry-item:last-child {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.entry-content {
+  grid-area: content;
+  min-width: 0;
+  max-width: var(--entry-content-width);
+  overflow-wrap: anywhere;
+}
+
+.entry-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.entry-subtitle {
+  margin-top: 5px;
+  color: #444;
+  font-size: 14px;
+}
+
+.entry-date {
+  grid-area: date;
+  color: #666;
+  font-size: 13px;
+  text-align: right;
+}
+
+/* Document lists are also used by Education. */
+.document-links {
+  display: flex;
+  gap: 20px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.document-links a {
+  color: #2f9fb8;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration-color: #7fc6d5;
+  text-underline-offset: 3px;
+}
+
+.document-links a:hover {
+  color: #1f8298;
+}
+
+.entry-links {
+  flex-wrap: wrap;
+  gap: 8px var(--entry-link-gap);
+}
+
+.entry-links li {
+  min-width: 0;
+}
+
+.entry-links a[target="_blank"]::after {
+  content: " ↗";
+  font-size: 10px;
+}
+
+html:lang(zh-CN) .entry-section {
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+@media (min-width: 1000px) {
+  .entry-section {
+    --entry-default-item-padding: 28px;
+    --entry-default-column-gap: 28px;
+  }
+}
+
+/* Above 1500px, retain the capped content width; sections can override it. */
+@media (max-width: 650px) {
+  .entry-section {
+    --entry-default-item-padding: 22px;
+    --entry-default-column-gap: 5px;
+    --entry-default-link-gap: 16px;
+  }
+
+  .entry-item {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "date" "content";
+  }
+
+  .entry-date {
+    text-align: left;
+  }
+}

@@ -183,9 +183,6 @@ html:lang(zh-CN) .bio-hero .links {
     margin-bottom: 68px;
     background: #040506;
   }
-  section {
-    margin-top: 64px;
-  }
 
   .bio-photo {
     inset: auto 0 0 auto;
