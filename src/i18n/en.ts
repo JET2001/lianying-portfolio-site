@@ -6,7 +6,7 @@ export const en = {
     evidenceNotes: 'Evidence notes',
     education: 'Education',
     experience: 'Work experience',
-    publications: 'Publications & preprints',
+    publications: 'Publications',
     leadership: 'Leadership & activities',
   },
   links: {

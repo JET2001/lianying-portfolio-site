@@ -6,12 +6,12 @@
     "date": "Sep 2024 - Jun 2027",
     "details": [
       {
-        "label": "Transcript",
+        "label": "Transcript (Mand)",
         "href" : "/SASS/transcript.pdf",
         "external": true
       },
       {
-        "label": "Enrolment",
+        "label": "Enrolment (Mand)",
         "href" : "/SASS/enrolment.pdf",
         "external": true
       }
@@ -24,12 +24,12 @@
     "date": "Sep 2020 - Jul 2024",
     "details": [
       {
-        "label": "Transcript",
+        "label": "Transcript (Mand)",
         "href" : "/SWUFE/transcript.pdf",
         "external": true
       },
       {
-        "label": "Enrolment",
+        "label": "Enrolment (Mand)",
         "href" : "/SWUFE/enrolment.pdf",
         "external": true
       }

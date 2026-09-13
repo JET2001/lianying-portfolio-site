@@ -6,7 +6,7 @@ export const zh = {
     evidenceNotes: '项目说明',
     education: '教育背景',
     experience: '实习经历',
-    publications: '项目成果',
+    publications: '学术发表',
     leadership: '校园经历',
   },
   links: {

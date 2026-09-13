@@ -11,7 +11,7 @@
         "external": true
       },
       {
-        "label": "Certificate",
+        "label": "Certificate (Mand)",
         "href": "/certs/CEDRI.pdf",
         "external": true
       }
@@ -29,7 +29,7 @@
         "external": true
       },
       {
-        "label": "Certificate",
+        "label": "Certificate (Mand)",
         "href": "/certs/CCID.pdf",
         "external": true
       }
@@ -47,7 +47,7 @@
         "external": true
       },
       {
-        "label": "Certificate",
+        "label": "Certificate (Mand)",
         "href": "/certs/CCB.pdf",
         "external": true
       }
