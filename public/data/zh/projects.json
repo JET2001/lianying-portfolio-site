@@ -1,0 +1,27 @@
+[
+  {
+    "id": "challenge-cup",
+    "title": "成渝地区双城经济圈创新电子信息产业人才队伍建设研究",
+    "context": "“挑战杯”大学生课外学术科技作品竞赛 · 省级三等奖",
+    "date": "2025.05 – 2025.06",
+    "links": []
+  },
+  {
+    "id": "social-security-policy",
+    "title": "四川省人力资源与社会保障厅“十五五”规划课题",
+    "context": "就业与社会保障部分研究",
+    "date": "2024.12 – 2025.07",
+    "links": [
+      {
+        "label": "就业政策报告",
+        "href": "/projects/emp2025.pdf",
+        "external": true
+      },
+      {
+        "label": "社会保障政策报告",
+        "href": "/projects/soc2025.pdf",
+        "external": true
+      }
+    ]
+  }
+]

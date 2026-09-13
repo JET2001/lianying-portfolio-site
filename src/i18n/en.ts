@@ -2,7 +2,7 @@ import type { UiStrings } from './types'
 
 export const en = {
   sections: {
-    selectedWork: 'Selected work',
+    selectedWork: 'Projects',
     evidenceNotes: 'Evidence notes',
     education: 'Education',
     experience: 'Work experience',
