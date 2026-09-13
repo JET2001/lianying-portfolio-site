@@ -2,10 +2,12 @@ import './style.css'
 
 import { Header } from './components/header'
 import { Education } from './components/education'
+import { Experience } from './components/experience'
 import { ui } from './i18n'
 import type { Locale, UiStrings } from './i18n/types'
 import type { Bio } from './components/header/types'
 import type { EducationItem } from './components/education/types'
+import type { ExperienceItem } from './components/experience/types'
 
 let locale = getInitialLocale()
 
@@ -26,6 +28,7 @@ async function render(): Promise<void> {
       <div class="wrap">
         ${Header(data.bio, ui_language)}
         <main>
+        ${Experience(data.experience, ui_language)}
         ${Education(data.education, ui_language)}
         </main>      
       </div>
@@ -85,14 +88,16 @@ async function loadJson<T>(
 }
 
 async function loadPageData(locale: Locale) {
-  const [bio, education] = await Promise.all([
+  const [bio, education, experience] = await Promise.all([
     loadJson<Bio>(locale, 'bio'),
     loadJson<EducationItem[]>(locale, 'education'),
+    loadJson<ExperienceItem[]>(locale, 'experience'),
   ])
 
   return {
     bio,
     education,
+    experience,
   }
 }
 

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "CEDRI",
+    "company": "成都市经济发展研究院",
+    "role": "产业研究所实习生",
+    "date": "2026.03 – 2026.06",
+    "links": [
+      {
+        "label": "实习总结",
+        "href": "/summary/zh/CEDRI.pdf",
+        "external": true
+      },
+      {
+        "label": "实习证明",
+        "href": "/certs/CEDRI.pdf",
+        "external": true
+      }
+    ]
+  },
+  {
+    "id": "CCID",
+    "company": "赛迪工业和信息化研究院（集团）四川有限公司",
+    "role": "平台建设与运营中心部实习生",
+    "date": "2025.08 – 2025.12",
+    "links": [
+      {
+        "label": "实习总结",
+        "href": "/summary/zh/CCID.pdf",
+        "external": true
+      },
+      {
+        "label": "实习证明",
+        "href": "/certs/CCID.pdf",
+        "external": true
+      }
+    ]
+  },
+  {
+    "id": "CCB",
+    "company": "中国建设银行四川省分行",
+    "role": "公司部实习生",
+    "date": "2022.07 – 2022.08",
+    "links": [
+      {
+        "label": "实习总结",
+        "href": "/summary/zh/CCB.pdf",
+        "external": true
+      },
+      {
+        "label": "实习证明",
+        "href": "/certs/CCB.pdf",
+        "external": true
+      }
+    ]
+  }
+]

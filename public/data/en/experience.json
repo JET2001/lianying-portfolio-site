@@ -1,0 +1,56 @@
+[
+  {
+    "id": "CEDRI",
+    "company": "Chengdu Economic Development Research Institute",
+    "role": "Industrial Research Institute Intern",
+    "date": "Mar 2026 – Jun 2026",
+    "links": [
+      {
+        "label": "Summary",
+        "href": "/summary/en/CEDRI.pdf",
+        "external": true
+      },
+      {
+        "label": "Certificate",
+        "href": "/certs/CEDRI.pdf",
+        "external": true
+      }
+    ]
+  },
+  {
+    "id": "CCID",
+    "company": "CCID Industry and Information Technology Research Institute (Group) Sichuan Co., Ltd.",
+    "role": "Development and Operations Intern",
+    "date": "Aug 2025 – Dec 2025",
+    "links": [
+      {
+        "label": "Summary",
+        "href": "/summary/en/CCID.pdf",
+        "external": true
+      },
+      {
+        "label": "Certificate",
+        "href": "/certs/CCID.pdf",
+        "external": true
+      }
+    ]
+  },
+  {
+    "id": "CCB",
+    "company": "China Construction Bank, Sichuan Branch",
+    "role": "Corporate Banking Intern",
+    "date": "Jul 2022 – Aug 2022",
+    "links": [
+      {
+        "label": "Summary",
+        "href": "/summary/en/CCB.pdf",
+        "external": true
+      },
+      {
+        "label": "Certificate",
+        "href": "/certs/CCB.pdf",
+        "external": true
+      }
+    ]
+  }
+]
