@@ -1,4 +1,5 @@
 import './style.css'
+import './styles/entries.css'
 
 import { Header } from './components/header'
 import { Education } from './components/education'

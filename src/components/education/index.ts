@@ -20,7 +20,7 @@ export function Education(
           ${
             details.length > 0
               ? `
-                <ul class="education-details">
+                <ul class="education-details document-links">
                   ${details
                     .map(
                       ({ label, href, external }) => `

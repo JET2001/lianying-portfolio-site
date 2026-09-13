@@ -53,8 +53,12 @@ main {
   display: block;
 }
 
+:root {
+  --section-gap: 76px;
+}
+
 section {
-  margin-top: 76px;
+  margin-top: var(--section-gap);
 }
 
 .section-title {
@@ -222,6 +226,12 @@ html:lang(zh-CN) .section-title {
   font-size: 20px;
 }
 
+@media (min-width: 1000px) {
+  :root {
+    --section-gap: 64px;
+  }
+}
+
 /* Mobile */
 
 @media (max-width: 650px) {
@@ -233,8 +243,8 @@ html:lang(zh-CN) .section-title {
     padding: 0 20px 80px;
   }
 
-  section {
-    margin-top: 58px;
+  :root {
+    --section-gap: 58px;
   }
 
   .section-title {
